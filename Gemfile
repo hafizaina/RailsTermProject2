@@ -24,11 +24,29 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Bootstrap layout
+gem 'bootstrap-sass', '~> 3.2.0'
+
 # To set up Active Admin, add the gem in your Gemfile. For Rails 4 support at the moment, we are tracking master.
 gem 'activeadmin', github: 'gregbell/active_admin'
 
 # The damn devise gem
 gem 'devise'
+
+# Use carrierwave to handle file uploads
+gem 'carrierwave'
+
+# Use this gem to implement a vote/likes system
+gem 'acts_as_votable', '~> 0.10.0'
+
+# Use this gem to implement a comment system
+gem 'acts_as_commentable'
+
+# Use this gem to implement followers
+gem 'acts_as_follower'
+
+# Use this gem to implement a news feed
+gem 'public_activity'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
