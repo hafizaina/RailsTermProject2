@@ -59,10 +59,10 @@ ActiveRecord::Schema.define(version: 20160417233849) do
   create_table "books", force: :cascade do |t|
     t.string   "name"
     t.decimal  "price"
+    t.integer  "genre_id"
     t.integer  "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "genre_id"
   end
 
   add_index "books", ["author_id"], name: "index_books_on_author_id", using: :btree
@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(version: 20160417233849) do
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true
 
   add_foreign_key "books", "authors"
 end
