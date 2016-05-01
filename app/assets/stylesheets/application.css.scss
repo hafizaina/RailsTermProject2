@@ -12,8 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery.datetimepicker.css
  */
 
+<<<<<<< HEAD:app/assets/stylesheets/application.scss
 
 @import "bootstrap";
 @import "bootstrap-sprockets";
@@ -26,3 +28,5 @@
 .alert-notice {
   @extend .alert-info;
 }
+=======
+>>>>>>> upstream/master:app/assets/stylesheets/application.css.scss
