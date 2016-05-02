@@ -1,2 +1,18 @@
-<h1>Home#front</h1>
-<p>Find me in app/views/home/front.html.erb</p>
+<div class="row">
+  <div id="newsfeed" class="col-lg-6">
+    <h4>  NEWSFEED</h4>
+    <div id="activities">
+      <% if @activities.empty? %>
+      <div class ="well">
+
+      </div>
+      <% else %>
+        <%= render_activities(@activities, layout: 'shared/activity') %>
+      <% end %>
+    </div>
+  </div>
+  <div id="intro" class="col-lg-6">
+    <h1> BookFace </h1>
+    <p> This is the site where you can talk about your favorite books and discover many more!</p>
+  </div>
+</div>

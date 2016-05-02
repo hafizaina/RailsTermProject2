@@ -153,7 +153,6 @@ ActiveRecord::Schema.define(version: 20160429145844) do
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-  add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true
 
   create_table "votes", force: :cascade do |t|
     t.integer  "votable_id"

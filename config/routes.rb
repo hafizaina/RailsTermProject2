@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   resources :posts
   devise_for :users
   get 'home/front'
-  #root to: 'home#front'
-  root  'pages#index'
-  get '/secret', to: 'pages#secret', as: :secret
+  root to: 'home#front'
+  #root  'pages#index'
+  #get 'home/index'
+  get '/forum', to: 'home#index', as: :index
   get '/books', to: 'pages#books', as: :books
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
