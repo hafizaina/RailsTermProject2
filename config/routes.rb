@@ -3,9 +3,16 @@ Rails.application.routes.draw do
   devise_for :users
   get 'home/front'
   root to: 'home#front'
-
+  #root  'pages#index'
+  #get 'home/index'
+  get '/forum', to: 'home#index', as: :index
+  get '/books', to: 'pages#books', as: :books
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

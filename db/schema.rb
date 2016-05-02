@@ -76,10 +76,10 @@ ActiveRecord::Schema.define(version: 20160429145844) do
   create_table "books", force: :cascade do |t|
     t.string   "name"
     t.decimal  "price"
+    t.integer  "genre_id"
     t.integer  "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "genre_id"
   end
 
   add_index "books", ["author_id"], name: "index_books_on_author_id", using: :btree
